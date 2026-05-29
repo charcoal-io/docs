@@ -16,8 +16,8 @@ Output shows a table of workspaces:
 
 ```
 NAME               STATUS          PATH
-hello-world        Up 2 hours      /home/user/.local-codespaces/hello-world
-my-project         Exited (0)      /home/user/.local-codespaces/my-project
+hello-world        Up 2 hours      /home/user/.charcoal-ws/hello-world
+my-project         Exited (0)      /home/user/.charcoal-ws/my-project
 ```
 
-Each workspace corresponds to a cloned repository under `~/.local-codespaces/`. Status is read from Docker container labels.
+Each workspace corresponds to a cloned repository under `~/.charcoal-ws/`. Status is read from Docker container labels.

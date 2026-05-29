@@ -22,4 +22,4 @@ Remove the `charcoal` command from your system:
 ./uninstall.sh
 ```
 
-This deletes the wrapper script at `~/.local/bin/charcoal`. Workspaces under `~/.local-codespaces/` are not removed.
+This deletes the wrapper script at `~/.local/bin/charcoal`. Workspaces under `~/.charcoal-ws/` are not removed.

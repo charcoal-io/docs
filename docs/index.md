@@ -4,7 +4,7 @@ icon: lucide/sparkles
 
 # What is Charcoal IDE?
 
-**Charcoal** is a platform for reproducible development environments. It gives you a consistent, containerized workspace whether you're working from your local machine, a self-hosted server, or a team dashboard.
+[charcoal-cli](https://github.com/charcoal-io) is a lightweight orchestrator for local and remote development environments. Built with [Dev Container](https://containers.dev/). It bridges the gap between local Docker-based workflows and cloud-scale development environments.
 
 The platform is composed of three components:
 
@@ -22,7 +22,10 @@ charcoal up --ide https://github.com/octocat/hello-world.git
 
 ---
 
-## Charcoal Platform
+1. Clones the repository into `~/.charcoal-ws/`
+2. Detects or generates a `devcontainer.json`
+3. Builds and starts the container with `devcontainer up`
+4. Launches either an interactive shell or a web-based VS Code (OpenVSCode Server)
 
 A web-based dashboard for managing development environments visually — coming soon.
 
@@ -41,6 +44,7 @@ Programmatic access to charcoal's orchestration layer for CI/CD and custom tooli
 ## Which component should I use?
 
 | You want to... | Use |
+
 |----------------|-----|
 | Provision environments from the terminal | [CLI](./cli/) |
 | Manage workspaces with a graphical dashboard | [Platform](./platform/) *(coming soon)* |
