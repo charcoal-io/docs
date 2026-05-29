@@ -38,10 +38,10 @@ nav = [
     { "Overview" = "api/index.md" },
   ]},
   { "Links" = [
-    { "GitHub →" = "https://github.com/charcoal-io/charcoal" },
-    { "Telegram →" = "https://t.me/charcoal" },
-    { "X →" = "https://x.com/charcoal" },
-    { "Discord →" = "https://discord.gg/charcoal" },
+    { "GitHub →" = "https://github.com/charcoal-io" },
+    { "Telegram →" = "https://t.me/charcoal_io" },
+    { "X →" = "https://x.com/charcoal_io" },
+    { "Discord →" = "https://discord.gg/charcoal_io" },
   ]},
 ]
 
@@ -85,7 +85,7 @@ toggle.name = "Switch to light mode"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/anomalyco/charcoal"
+link = "https://github.com/charcoal-io"
 
 [project.markdown_extensions.abbr]
 [project.markdown_extensions.admonition]

@@ -1,6 +1,6 @@
 # Getting Started
 
-Get charcoal CLI up and running in minutes.
+Get charcoal-cli up and running in minutes.
 
 ## Prerequisites
 

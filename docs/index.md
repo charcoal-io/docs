@@ -1,10 +1,6 @@
----
-icon: lucide/sparkles
----
-
 # What is Charcoal IDE?
 
-[charcoal-cli](https://github.com/charcoal-io) is a lightweight orchestrator for local and remote development environments. Built with [Dev Container](https://containers.dev/). It bridges the gap between local Docker-based workflows and cloud-scale development environments.
+A lightweight orchestrator for local and remote development environments. Built with [Dev Container](https://containers.dev/). It bridges the gap between local Docker-based workflows and cloud-scale development environments.
 
 The platform is composed of three components:
 
@@ -27,6 +23,10 @@ charcoal up --ide https://github.com/octocat/hello-world.git
 3. Builds and starts the container with `devcontainer up`
 4. Launches either an interactive shell or a web-based VS Code (OpenVSCode Server)
 
+---
+
+## Charcoal Platform
+
 A web-based dashboard for managing development environments visually — coming soon.
 
 [Learn more about the Platform →](./platform/)
@@ -44,15 +44,14 @@ Programmatic access to charcoal's orchestration layer for CI/CD and custom tooli
 ## Which component should I use?
 
 | You want to... | Use |
-
 |----------------|-----|
 | Provision environments from the terminal | [CLI](./cli/) |
 | Manage workspaces with a graphical dashboard | [Platform](./platform/) *(coming soon)* |
 | Integrate with CI/CD or bPlatformld custom tooling | [API](./api/) *(coming soon)* |
 
-## Common resources
+## Links
 
 - [GitHub →](https://github.com/charcoal-io/charcoal) — Source code, issues, and pull requests
-- [Telegram →](https://t.me/charcoal) — Community chat and announcements
-- [X →](https://x.com/charcoal) — News and updates
-- [Discord →](https://discord.gg/charcoal) — Community support and discussion
+- [Telegram →](https://t.me/charcoal_io) — Community chat and announcements
+- [X →](https://x.com/charcoal_io) — News and updates
+- [Discord →](https://discord.gg/charcoal_io) — Community support and discussion
