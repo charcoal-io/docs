@@ -33,9 +33,37 @@ nav = [
   ]},
   { "Platform" = [
     { "Overview" = "platform/index.md" },
+    { "Getting Started" = "platform/getting-started.md" },
+    { "How-to" = [
+      { "Deploy" = "platform/how-to/deploy.md" },
+      { "Manage Workspaces" = "platform/how-to/manage-workspaces.md" },
+      { "Configure Settings" = "platform/how-to/configure.md" },
+      { "Monitor" = "platform/how-to/monitor.md" },
+      { "Upgrade" = "platform/how-to/upgrade.md" },
+    ]},
+    { "Concepts" = [
+      { "Architecture" = "platform/concepts/architecture.md" },
+      { "Security" = "platform/concepts/security.md" },
+    ]},
+    { "Reference" = [
+      { "Configuration" = "platform/reference/configuration.md" },
+      { "Environment" = "platform/reference/environment.md" },
+    ]},
   ]},
   { "API Reference" = [
     { "Overview" = "api/index.md" },
+    { "Getting Started" = "api/getting-started.md" },
+    { "Guides" = [
+      { "Authentication" = "api/guides/authentication.md" },
+      { "Managing Workspaces" = "api/guides/managing-workspaces.md" },
+      { "Error Handling" = "api/guides/errors.md" },
+      { "Rate Limiting" = "api/guides/rate-limiting.md" },
+    ]},
+    { "Reference" = [
+      { "Workspaces" = "api/reference/workspaces.md" },
+      { "Containers" = "api/reference/containers.md" },
+      { "Configuration" = "api/reference/configuration.md" },
+    ]},
   ]},
   { "Links" = [
     { "GitHub →" = "https://github.com/charcoal-io" },
