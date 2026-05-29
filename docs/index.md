@@ -1,173 +1,63 @@
 ---
-icon: lucide/rocket
+icon: lucide/terminal
 ---
 
-# Get started
+# What is charcoal-cli?
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+[charcoal IDE](https://github.com/charcoal-io) is a lightweight orchestrator for local and remote development environments. Built with [Dev Container](https://containers.dev/). It bridges the gap between local Docker-based workflows and cloud-scale development environments.
 
-## Commands
+Charcoal gives you the consistency with the flexibility of local execution or self-hosted infrastructure. It provisions, manages, and connects to development environments (IDEs or shells) with minimal overhead.
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+## How do I use it?
 
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
+charcoal-ide is a CLI tool. You run it from your terminal:
 
-## Examples
+```bash
+# Clone a repo and open it in a browser-based VS Code
+charcoal up --ide https://github.com/octocat/hello-world.git
 
-### Admonitions
+# See all your running workspaces
+charcoal list
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
-
-!!! note
-
-    This is a **note** admonition. Use it to provide helpful information.
-
-!!! warning
-
-    This is a **warning** admonition. Be careful!
-
-### Details
-
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
-
-??? info "Click to expand for more info"
-
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
-
-## Code Blocks
-
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
-
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
-
-greet("Python")
+# Stop a workspace
+charcoal stop hello-world
 ```
 
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+## How does it work?
 
-    Code annotations allow to attach notes to lines of code.
+Charcoal wraps the [Dev Container CLI](https://github.com/devcontainers/cli) and Docker to create reproducible development environments. When you run `charcoal up`, it:
 
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
+1. Clones the repository into `~/.local-codespaces/`
+2. Detects or generates a `devcontainer.json`
+3. Builds and starts the container with `devcontainer up`
+4. Launches either an interactive shell or a web-based VS Code (OpenVSCode Server)
 
-## Content tabs
+## Features
 
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
+- **Dev Container Native** — Full `devcontainer.json` support for reproducible environments
+- **Web IDE Integration** — One-command browser-based VS Code via OpenVSCode Server
+- **Workspace Management** — List, track, and stop active environments
+- **Zero External Deps** — Pure Python 3.9+ stdlib; only needs Docker and the Dev Container CLI
+- **Modular Design** — Clean separation of workspace, config, container, and orchestration layers
 
-=== "Python"
+## How-to
 
-    ``` python
-    print("Hello from Python!")
-    ```
+- [Install](./how-to/install/) — Install Charcoal on your system
+- [Launch a Web IDE](./how-to/launch-web-ide/) — Clone a repo and open it in browser VS Code
+- [List Workspaces](./how-to/list-workspaces/) — See all provisioned environments
+- [Stop a Workspace](./how-to/stop-workspace/) — Gracefully shut down a dev container
+- [Update & Uninstall](./how-to/update/) — Keep Charcoal up to date or remove it
+- [Contribute](./how-to/contribute/) — Set up a development environment and submit changes
 
-=== "Rust"
+## Concepts
 
-    ``` rs
-    println!("Hello from Rust!");
-    ```
+- [Dev Containers](./concepts/dev-containers/) — How Charcoal uses the Dev Container Spec
+- [Workspaces](./concepts/workspaces/) — How environments are managed on disk and in Docker
+- [Architecture](./concepts/architecture/) — Internal design and component interaction
 
-## Diagrams
+## Links
 
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
-
-
-## Formatting
-
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
-
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
-
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+- [GitHub →](https://github.com/charcoal-io/charcoal) — Source code, issues, and pull requests
+- [Telegram →](https://t.me/charcoal) — Community chat and announcements
+- [X →](https://x.com/charcoal) — News and updates
+- [Discord →](https://discord.gg/charcoal) — Community support and discussion
