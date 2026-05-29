@@ -1,5 +1,5 @@
 ---
-icon: lucide/terminal-square
+icon: lucide/terminal
 ---
 
 # Commands Reference

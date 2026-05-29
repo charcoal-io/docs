@@ -1,5 +1,5 @@
 ---
-icon: lucide/terminal
+icon: lucide/terminal-square
 ---
 
 # charcoal-cli
