@@ -1,61 +1,52 @@
 ---
-icon: lucide/terminal
+icon: lucide/sparkles
 ---
 
-# What is charcoal-cli?
+# What is Charcoal IDE?
 
-[charcoal IDE](https://github.com/charcoal-io) is a lightweight orchestrator for local and remote development environments. Built with [Dev Container](https://containers.dev/). It bridges the gap between local Docker-based workflows and cloud-scale development environments.
+**Charcoal** is a platform for reproducible development environments. It gives you a consistent, containerized workspace whether you're working from your local machine, a self-hosted server, or a team dashboard.
 
-Charcoal gives you the consistency with the flexibility of local execution or self-hosted infrastructure. It provisions, manages, and connects to development environments (IDEs or shells) with minimal overhead.
+The platform is composed of three components:
 
-## How do I use it?
+---
 
-charcoal-ide is a CLI tool. You run it from your terminal:
+## charcoal-cli
+
+The command-line tool for provisioning and managing dev containers. Clone a repo, launch a browser-based VS Code, and stop environments — all from your terminal.
 
 ```bash
-# Clone a repo and open it in a browser-based VS Code
 charcoal up --ide https://github.com/octocat/hello-world.git
-
-# See all your running workspaces
-charcoal list
-
-# Stop a workspace
-charcoal stop hello-world
 ```
 
-## How does it work?
+[Get started with the CLI →](./cli/getting-started.md)
 
-Charcoal wraps the [Dev Container CLI](https://github.com/devcontainers/cli) and Docker to create reproducible development environments. When you run `charcoal up`, it:
+---
 
-1. Clones the repository into `~/.local-codespaces/`
-2. Detects or generates a `devcontainer.json`
-3. Builds and starts the container with `devcontainer up`
-4. Launches either an interactive shell or a web-based VS Code (OpenVSCode Server)
+## Charcoal Platform
 
-## Features
+A web-based dashboard for managing development environments visually — coming soon.
 
-- **Dev Container Native** — Full `devcontainer.json` support for reproducible environments
-- **Web IDE Integration** — One-command browser-based VS Code via OpenVSCode Server
-- **Workspace Management** — List, track, and stop active environments
-- **Zero External Deps** — Pure Python 3.9+ stdlib; only needs Docker and the Dev Container CLI
-- **Modular Design** — Clean separation of workspace, config, container, and orchestration layers
+[Learn more about the Platform →](./platform/)
 
-## How-to
+---
 
-- [Install](./how-to/install/) — Install Charcoal on your system
-- [Launch a Web IDE](./how-to/launch-web-ide/) — Clone a repo and open it in browser VS Code
-- [List Workspaces](./how-to/list-workspaces/) — See all provisioned environments
-- [Stop a Workspace](./how-to/stop-workspace/) — Gracefully shut down a dev container
-- [Update & Uninstall](./how-to/update/) — Keep Charcoal up to date or remove it
-- [Contribute](./how-to/contribute/) — Set up a development environment and submit changes
+## API Reference
 
-## Concepts
+Programmatic access to charcoal's orchestration layer for CI/CD and custom tooling — coming soon.
 
-- [Dev Containers](./concepts/dev-containers/) — How Charcoal uses the Dev Container Spec
-- [Workspaces](./concepts/workspaces/) — How environments are managed on disk and in Docker
-- [Architecture](./concepts/architecture/) — Internal design and component interaction
+[Learn more about the API →](./api/)
 
-## Links
+---
+
+## Which component should I use?
+
+| You want to... | Use |
+|----------------|-----|
+| Provision environments from the terminal | [CLI](./cli/) |
+| Manage workspaces with a graphical dashboard | [Platform](./platform/) *(coming soon)* |
+| Integrate with CI/CD or bPlatformld custom tooling | [API](./api/) *(coming soon)* |
+
+## Common resources
 
 - [GitHub →](https://github.com/charcoal-io/charcoal) — Source code, issues, and pull requests
 - [Telegram →](https://t.me/charcoal) — Community chat and announcements

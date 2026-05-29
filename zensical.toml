@@ -1,36 +1,47 @@
 [project]
 
-site_name = "charcoal IDE"
+site_name = "Charcoal IDE"
 site_description = "Local and remote VS Code development environments."
-site_author = "charcoal IDE"
-site_url = "https://charcoal.bilsul.com/docs"
+site_author = "Charcoal IDE"
+site_url = "https://github.com/charcoal-io/docs"
 
 copyright = """
-Copyright &copy; 2026 The charcoal Authors
+Copyright &copy; 2026 Charcoal Inc.
 """
 
 nav = [
-  { "What is charcoal?" = "index.md" },
-  { "How-to" = [
-    { "Overview" = "how-to/index.md" },
-    { "Install CLI" = "how-to/install.md" },
-    { "Launch an IDE" = "how-to/launch-web-ide.md" },
-    { "List Workspaces" = "how-to/list-workspaces.md" },
-    { "Stop a Workspace" = "how-to/stop-workspace.md" },
-    { "Update & Uninstall" = "how-to/update.md" },
-    { "Contribute" = "how-to/contribute.md" },
+  { "charcoal-cli" = [
+    { "Overview" = "cli/index.md" },
+    { "Getting Started" = "cli/getting-started.md" },
+    { "How-to" = [
+      { "Install" = "how-to/install.md" },
+      { "Launch an IDE" = "how-to/launch-web-ide.md" },
+      { "List Workspaces" = "how-to/list-workspaces.md" },
+      { "Stop a Workspace" = "how-to/stop-workspace.md" },
+      { "Update & Uninstall" = "how-to/update.md" },
+      { "Contribute" = "how-to/contribute.md" },
+    ]},
+    { "Concepts" = [
+      { "Dev Containers" = "concepts/dev-containers.md" },
+      { "Workspaces" = "concepts/workspaces.md" },
+      { "Architecture" = "concepts/architecture.md" },
+    ]},
+    { "Reference" = [
+      { "Commands" = "cli/commands.md" },
+      { "Configuration" = "cli/configuration.md" },
+    ]},
   ]},
-  { "Concepts" = [
-    { "Overview" = "concepts/index.md" },
-    { "Dev Containers" = "concepts/dev-containers.md" },
-    { "Workspaces" = "concepts/workspaces.md" },
-    { "Architecture" = "concepts/architecture.md" },
+  { "Platform" = [
+    { "Overview" = "platform/index.md" },
+  ]},
+  { "API Reference" = [
+    { "Overview" = "api/index.md" },
   ]},
   { "Links" = [
-    { "GitHub →" = "https://github.com/charcoal-io/docs" },
-    { "Telegram →" = "https://t.me/charcoal_ide" },
-    { "X →" = "https://x.com/charcoal_ide" },
-    { "Discord →" = "https://discord.gg/charcoal_ide" },
+    { "GitHub →" = "https://github.com/charcoal-io/charcoal" },
+    { "Telegram →" = "https://t.me/charcoal" },
+    { "X →" = "https://x.com/charcoal" },
+    { "Discord →" = "https://discord.gg/charcoal" },
   ]},
 ]
 
