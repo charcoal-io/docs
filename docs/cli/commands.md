@@ -4,6 +4,123 @@ icon: lucide/terminal
 
 # Commands Reference
 
+## `charcoal auth login`
+
+Authenticate with the Charcoal API.
+
+```bash
+charcoal auth login [options]
+```
+
+Two authentication methods are supported:
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `--method, -m` | `password` | Authentication method: `password` or `google` |
+| `--username` | — | Username for password login (prompted if omitted) |
+| `--password` | — | Password for password login (prompted securely if omitted) |
+
+### Password + OTP flow (default)
+
+1. Enter your username and password
+2. The server validates credentials and sends a 6-digit OTP code to your email
+3. Enter the OTP code to complete authentication
+
+```bash
+charcoal auth login
+#   Username: alice
+#   Password: [hidden]
+#   ✓ Password verified. OTP sent to a****@example.com
+#   Enter OTP code: 123456
+#   ✓ Logged in as alice <alice@example.com>
+```
+
+### Google OAuth flow
+
+Opens a browser window for Google authentication:
+
+```bash
+charcoal auth login --method google
+#   ✓ Starting Google OAuth flow...
+#   ✓ Opening browser for Google authentication...
+#   ✓ Logged in as alice <alice@gmail.com>
+```
+
+---
+
+## `charcoal auth register`
+
+Create a new Charcoal account.
+
+```bash
+charcoal auth register --username <name> --email <email> [--password <password>]
+```
+
+| Option | Required | Description |
+|--------|----------|-------------|
+| `--username` | Yes | Desired username |
+| `--email` | Yes | Email address |
+| `--password` | No | Password (prompted securely if omitted) |
+
+**Example:**
+
+```bash
+charcoal auth register --username alice --email alice@example.com
+#   Password: [hidden]
+#   ✓ Account created for alice
+#   Run: charcoal auth login
+```
+
+---
+
+## `charcoal auth status`
+
+Show the current authentication status.
+
+```bash
+charcoal auth status
+```
+
+Displays the authenticated user and session expiry information. If the session has expired, it automatically attempts a token refresh.
+
+---
+
+## `charcoal auth logout`
+
+Log out and clear stored credentials.
+
+```bash
+charcoal auth logout
+#   ✓ Session invalidated on server
+#   ✓ Logged out. Local session cleared.
+```
+
+---
+
+## `charcoal auth token`
+
+Print the current access token (useful for scripting or API access).
+
+```bash
+charcoal auth token [--refresh]
+```
+
+| Option | Description |
+|--------|-------------|
+| `--refresh` | Print the refresh token instead of the access token |
+
+**Example:**
+
+```bash
+# Get the access token for API calls
+export CHARCOAL_TOKEN=$(charcoal auth token)
+
+# Use it with curl
+curl -H "Authorization: Bearer $CHARCOAL_TOKEN" https://api.charcoal.dev/api/v1/auth/me
+```
+
+---
+
 ## `charcoal up`
 
 Provision and start a development environment.

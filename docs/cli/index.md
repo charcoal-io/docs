@@ -34,6 +34,8 @@ Charcoal wraps the [Dev Container CLI](https://github.com/devcontainers/cli) and
 
 - **Dev Container Native** — Full `devcontainer.json` support for reproducible environments
 - **Web IDE Integration** — One-command browser-based VS Code via OpenVSCode Server
+- **Cloud Authentication** — Password + OTP or Google OAuth login for cloud API access
+- **Session Management** — Token-based sessions with automatic refresh and rotation
 - **Workspace Management** — List, track, and stop active environments
 - **Zero External Deps** — Pure Python 3.9+ stdlib; only needs Docker and the Dev Container CLI
 - **Modular Design** — Clean separation of workspace, config, container, and orchestration layers

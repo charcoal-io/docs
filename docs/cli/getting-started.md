@@ -23,6 +23,23 @@ export PATH="$HOME/.local/bin:$PATH"
 
 See the [Install guide](../how-to/install.md) for detailed instructions, including local (no-install) usage.
 
+## Authenticate (Optional for Accessing Compute and Workflows )
+
+While local workspaces work without authentication, cloud features (VM management, compute, billing) require logging in:
+
+```bash
+# Login with username/password + OTP
+charcoal auth login
+
+# Or use Google OAuth
+charcoal auth login --method google
+
+# Check your status
+charcoal auth status
+```
+
+See the [Auth Commands](./commands.md#charcoal-auth-login) reference for details.
+
 ## Launch Your First Workspace
 
 ```bash
