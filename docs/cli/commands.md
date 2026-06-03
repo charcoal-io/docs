@@ -192,6 +192,76 @@ charcoal stop hello-world
 
 ---
 
+## `charcoal config`
+
+View and modify CLI configuration settings.
+
+```bash
+charcoal config <command> [key] [value]
+```
+
+| Subcommand       | Description                                               |
+|------------------|-----------------------------------------------------------|
+| `get <key>`      | Print the value of a configuration key                    |
+| `set <key> <value>` | Set a configuration key to a value                     |
+| `unset <key>`    | Remove a custom value (falls back to defaults)            |
+| `list`           | Show all configuration keys and values                    |
+| `show`           | Detailed view with types and descriptions                 |
+| `init`           | Re-initialize config from `defaults.json`                 |
+| `edit`           | Open `config.json` in `$EDITOR` (or `nano`)              |
+| `reset-defaults` | Reset `defaults.json` to built-in defaults                |
+
+**Examples:**
+
+```bash
+# View the current IDE image
+charcoal config get ide.image
+# bilw/openvscode-server:latest
+
+# Change the IDE image
+charcoal config set ide.image my-ide:latest
+# ✓ ide.image = my-ide:latest
+
+# Change the default port
+charcoal config set ide.port 8080
+# ✓ ide.port = 8080
+
+# List all settings
+charcoal config list
+# KEY                    VALUE
+# ------------------------------------------------------------
+# ide.image              bilw/openvscode-server:latest
+# ide.port               8080
+# workspace.dir          /home/user/.charcoal-ws
+
+# Detailed view
+charcoal config show
+# KEY                    TYPE       VALUE
+# ------------------------------------------------------------------------------
+# ide.image              string     bilw/openvscode-server:latest  # Docker image...
+# ide.port               integer    3000  # Host port for the web IDE
+# workspace.dir          string     /home/user/.charcoal-ws  # Directory where...
+
+# Open in editor
+charcoal config edit
+
+# Re-initialize from defaults
+charcoal config init
+# ✓ Config initialized from defaults.
+
+# Reset defaults file
+charcoal config reset-defaults
+# ✓ Defaults reset to built-in values.
+
+# Reset a setting to default
+charcoal config unset ide.port
+# ✓ ide.port reset to default: 3000
+```
+
+See [Configuration](configuration.md) for the full list of supported keys and their defaults.
+
+---
+
 ## `charcoal --version`
 
 Print the installed version.
