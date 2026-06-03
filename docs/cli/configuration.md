@@ -21,7 +21,7 @@ charcoal config <command> [key] [value]
 | `unset <key>`      | Remove a custom value (falls back to defaults)            |
 | `list`             | Show all configuration keys and values                    |
 | `show`             | Detailed view with types and descriptions                 |
-| `init`             | Re-initialize config from `defaults.json`                 |
+| `init`             | Re-initialize config from `defaults.json` or `init.yaml`   |
 | `edit`             | Open `config.json` in `$EDITOR` (or `nano`)              |
 | `reset-defaults`   | Reset `defaults.json` to built-in defaults                |
 
@@ -51,6 +51,9 @@ charcoal config edit
 
 # Re-initialize from your customized defaults
 charcoal config init
+
+# Or from an init.yaml file (auto-detected)
+charcoal config init --file ./init.yaml
 
 # Reset defaults to built-in values
 charcoal config reset-defaults
@@ -119,6 +122,54 @@ charcoal config reset-defaults
 To re-initialize your config from the defaults file:
 ```bash
 charcoal config init
+```
+
+## Init YAML
+
+The `charcoal init` command reads an `init.yaml` file and applies its settings to the active config. This is useful for bootstrapping new installations or sharing config across machines.
+
+```bash
+charcoal init [--file <path>]
+```
+
+Auto-detection order: `./init.yaml` → `./charcoal.yaml` → `~/.charcoal/init.yaml`.
+
+### YAML Format
+
+Settings use the same dotted-key structure as the CLI:
+
+```yaml
+ide:
+  image: bilw/openvscode-server:latest
+  port: 8080
+workspace:
+  dir: /mnt/ssd/workspaces
+```
+
+You can also set arbitrary future keys:
+
+```yaml
+ssh:
+  key: ~/.ssh/id_ed25519
+cloud:
+  provider: aws
+  region: us-east-1
+```
+
+### Example workflow
+
+```bash
+# 1. Create an init.yaml
+cat > init.yaml << 'EOF'
+ide:
+  port: 4000
+workspace:
+  dir: /home/user/custom-ws
+EOF
+
+# 2. Apply it
+charcoal init
+# ✓ Applied 2 setting(s) from init.yaml
 ```
 
 ## How Configs Affect Behavior

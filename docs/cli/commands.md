@@ -192,6 +192,35 @@ charcoal stop hello-world
 
 ---
 
+## `charcoal init`
+
+Initialize configuration from an `init.yaml` file.
+
+```bash
+charcoal init [--file <path>]
+```
+
+| Option | Description |
+|--------|-------------|
+| `--file, -f` | Path to `init.yaml` (auto-detected if omitted) |
+
+Auto-detection order: `./init.yaml` → `./charcoal.yaml` → `~/.charcoal/init.yaml`.
+
+**Example:**
+
+```bash
+# Auto-detect init.yaml in current directory
+charcoal init
+# ✓ Applied 3 setting(s) from init.yaml
+
+# Use a custom path
+charcoal init --file ~/projects/my-config.yaml
+```
+
+See [Configuration](configuration.md#init-yaml) for the YAML format reference.
+
+---
+
 ## `charcoal config`
 
 View and modify CLI configuration settings.
@@ -207,7 +236,7 @@ charcoal config <command> [key] [value]
 | `unset <key>`    | Remove a custom value (falls back to defaults)            |
 | `list`           | Show all configuration keys and values                    |
 | `show`           | Detailed view with types and descriptions                 |
-| `init`           | Re-initialize config from `defaults.json`                 |
+| `init`           | Re-initialize config from `defaults.json` or `init.yaml`   |
 | `edit`           | Open `config.json` in `$EDITOR` (or `nano`)              |
 | `reset-defaults` | Reset `defaults.json` to built-in defaults                |
 
