@@ -51,7 +51,7 @@ Programmatic access to charcoal's orchestration layer for CI/CD and custom tooli
 
 ## Links
 
-- [GitHub →](https://github.com/charcoal-io/charcoal) — Source code, issues, and pull requests
+- [GitHub →](https://github.com/charcoal-io/compose) — Source code, issues, and pull requests
 - [Telegram →](https://t.me/charcoal_io) — Community chat and announcements
 - [X →](https://x.com/charcoal_io) — News and updates
 - [Discord →](https://discord.gg/charcoal_io) — Community support and discussion
