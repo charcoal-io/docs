@@ -15,6 +15,6 @@ The Charcoal Platform will provide a graphical interface to:
 
 ## Status
 
-The UI is under active development and not yet available for use. Watch the [GitHub repository](https://github.com/charcoal-io/compose) for release announcements.
+The UI is under active development and not yet available for use. Watch the [GitHub repository](https://github.com/heavymess/compose) for release announcements.
 
 In the meantime, use the [charcoal CLI](../cli/) to provision and manage your development environments from the terminal.

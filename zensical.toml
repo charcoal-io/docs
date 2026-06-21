@@ -1,9 +1,9 @@
 [project]
 
-site_name = "Charcoal IDE"
+site_name = "Charcoal"
 site_description = "Local and remote VS Code development environments."
-site_author = "Charcoal IDE"
-site_url = "https://github.com/charcoal-io/docs"
+site_author = "Charcoal"
+site_url = "https://github.com/heavymess/docs"
 
 
 nav = [
@@ -63,10 +63,10 @@ nav = [
   #   ]},
   # ]},
   { "Links" = [
-    { "GitHub →" = "https://github.com/charcoal-io" },
-    { "Telegram →" = "https://t.me/charcoal_io" },
-    { "X →" = "https://x.com/charcoal_io" },
-    { "Discord →" = "https://discord.gg/charcoal_io" },
+    { "GitHub →" = "https://github.com/heavymess" },
+    { "Telegram →" = "https://t.me/heavymess" },
+    { "X →" = "https://x.com/heavymess" },
+    { "Discord →" = "https://discord.gg/heavymess" },
   ]},
 ]
 
@@ -110,7 +110,7 @@ toggle.name = "Switch to light mode"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/charcoal-io"
+link = "https://github.com/heavymess"
 
 [project.markdown_extensions.abbr]
 [project.markdown_extensions.admonition]

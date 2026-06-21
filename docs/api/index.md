@@ -15,6 +15,6 @@ The charcoal API will enable you to:
 
 ## Status
 
-The API is under active development and not yet available for use. Watch the [GitHub repository](https://github.com/charcoal-io/compose) for release announcements.
+The API is under active development and not yet available for use. Watch the [GitHub repository](https://github.com/heavymess/compose) for release announcements.
 
 In the meantime, use the [charcoal CLI](../cli/) to provision and manage your development environments from the terminal.

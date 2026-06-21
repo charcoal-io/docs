@@ -1,4 +1,4 @@
-# What is Charcoal IDE?
+# What is Charcoal?
 
 A lightweight orchestrator for local and remote development environments. Built with [Dev Container](https://containers.dev/). It bridges the gap between local Docker-based workflows and cloud-scale development environments.
 
@@ -51,7 +51,7 @@ Programmatic access to charcoal's orchestration layer for CI/CD and custom tooli
 
 ## Links
 
-- [GitHub →](https://github.com/charcoal-io/compose) — Source code, issues, and pull requests
-- [Telegram →](https://t.me/charcoal_io) — Community chat and announcements
-- [X →](https://x.com/charcoal_io) — News and updates
-- [Discord →](https://discord.gg/charcoal_io) — Community support and discussion
+- [GitHub →](https://github.com/heavymess/compose) — Source code, issues, and pull requests
+- [Telegram →](https://t.me/heavymess) — Community chat and announcements
+- [X →](https://x.com/heavymess) — News and updates
+- [Discord →](https://discord.gg/heavymess) — Community support and discussion

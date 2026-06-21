@@ -1,6 +1,6 @@
 # Charcoal Documentation Site
 
-Documentation site for the Charcoal IDE platform, powered by [Zensical](https://zensical.dev) static site generator.
+Documentation site for the Charcoal platform, powered by [Zensical](https://zensical.dev) static site generator.
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ The site is configured via `zensical.toml`:
 
 - **Theme**: Material-inspired with Inter and Jetbrains Mono fonts
 - **Color scheme**: Light/dark mode support
-- **Site name**: "Charcoal IDE"
+- **Site name**: "Charcoal"
 
 ## Development
 
